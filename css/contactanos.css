@@ -1,0 +1,123 @@
+body {
+    background: linear-gradient(to bottom, #fff7ec, #ffe7c4);
+    color: #5a3d1a;
+}
+.contacto-contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 40px 20px;
+    flex-wrap: wrap; /* para que baje en pantallas pequeñas */
+}
+
+/* FORMULARIO */
+.formulario {
+    flex: 1;
+    max-width: 450px;
+    background: #ffffff;
+    padding: 25px 100px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.10);
+    animation: aparecer .6s ease;
+}
+
+/* Animación */
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ESPACIADO INTERNO */
+.formulario div {
+    margin-bottom: 18px;
+}
+
+/* LABELS */
+.formulario label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #333;
+    text-align: left;
+    font-size: 20px;
+}
+
+/* INPUTS */
+.formulario input {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 1px solid #d8d5db;
+    background: #fafafa;
+    font-size: 14px;
+    transition: 0.2s ease;
+}
+
+/* FOCUS INPUT */
+.formulario input:focus {
+    border-color: #ff7b5c;
+    box-shadow: 0 0 5px rgba(255, 123, 92, 0.4);
+    outline: none;
+}
+
+/* BOTÓN */
+.btn {
+    width: 100%;
+    padding: 12px;
+    background: #ff7b5c;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+/* Hover */
+.btn:hover {
+    background: #ff5833;
+    transform: translateY(-2px);
+}
+
+/* Active */
+.btn:active {
+    transform: translateY(1px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 850px) {
+    .productos-contenedor {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .productos-contenedor h1 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .formulario {
+        margin: 0 auto;
+    }
+}
+
+/* MAPA */
+.mapa {
+    flex: 1;
+    max-width: 550px;
+}
+
+.mapa h2 {
+    text-align: left;
+    margin-bottom: 15px;
+    color: #a8733a;
+}
+
+.mapa2 {
+    height: 450px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
