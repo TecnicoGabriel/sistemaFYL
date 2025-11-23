@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/productos.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<header class="cabecera-principal">
+  <div class="contenedor">
+    <img src="../img/logotipo.png" alt="" width="100px" height="100px">
+    <nav class="navegacion">
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+
+        <li class="desplegable">
+          <a href="#">Nuestros Productos</a>
+          <ul class="submenu">
+            <li><a href="pasteles.html">Pasteles y Tortas</a></li>
+            <li><a href="postres.html">Postres</a></li>
+            <li><a href="bocaditos.html">Bocaditos y Catering</a></li>
+            <li><a href="panaderia.html">Panadería Artesanal</a></li>
+            <li><a href="temporada.html">Postres de Temporada</a></li>
+          </ul>
+        </li>
+
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="contactanos.html">Contáctanos</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="productos-contenedor">
+    <h1>Panaderia Artesanal</h1>
+
+    <div class="grid-productos">
+
+        <div class="tarjeta" onclick="supervista('../img/pan1.jpg','Baguette ','250 g de masa hidratada, fermentación lenta y horno con vapor: auténtico sabor francés.')">
+            <img src="../img/pan1.jpg" alt="">
+            <h3>Baguette </h3>
+            <p>Crujiente por fuera, miga abierta y aroma a levadura.</p>
+        </div>
+
+        <div class="tarjeta" onclick="supervista('../img/pan2.jpg','Pan Ciabatta','Alta hidratación y fermentación 16 h; ideal para mojar o sándwiches gourmet.')">
+            <img src="../img/pan2.jpg" alt="">
+            <h3>Pan Ciabatta </h3>
+            <p>Miga alveolada y corteza crujiente.</p>
+        </div>
+
+        <div class="tarjeta" onclick="supervista('../img/pan3.jpg','Pan de Masa Madre ','Harina, agua y sal; levadura natural 48 h: crust dorado y sabor desarrollado.')">
+            <img src="../img/pan3.jpg" alt="">
+            <h3>Pan de Masa Madre  </h3>
+            <p>Ácido suave y miga elástica.</p>
+        </div>
+
+        <div class="tarjeta" onclick="supervista('../img/pan4.jpg','Pan de Masa Madre Multigrano ','Linaza, chía y ajonjolí añaden crunch y omega-3 al sourdough tradicional.')">
+            <img src="../img/pan4.jpg" alt="">
+            <h3>Pan de Masa Madre Multigrano  </h3>
+            <p>Masa madre + semillas nutritivas.</p>
+        </div>
+
+        <div class="tarjeta" onclick="supervista('../img/pan5.jpg','Pan de Centeno ','70 % centeno, miel de abeja y fermento natural; excelente para pâtés.')">
+            <img src="../img/pan5.jpg" alt="">
+            <h3>Pan de Centeno </h3>
+            <p>Denso, húmedo y de sabor terroso.</p>
+        </div>
+
+        <div class="tarjeta" onclick="supervista('../img/pan6.jpg','Pan de Molde Artesanal ','Blanco o integral, horneado en molde y desmoldado: tostadas perfectas sin agujeros.')">
+            <img src="../img/pan6.jpg" alt="">
+            <h3>Pan de Molde Artesanal </h3>
+            <p>Blando, fino corte y migaja uniforme.</p>
+        </div>
+        
+        <div class="tarjeta" onclick="supervista('../img/pan7.jpg','Focaccia Romero-Sal','Masa alta hidratación, aceite de oliva virgen, romero fresco y sal gruesa: crujiente y esponjoso.')">
+            <img src="../img/pan7.jpg" alt="">
+            <h3>Focaccia Romero-Sal</h3>
+            <p>Aire italiano en pan aceitoso.</p>
+        </div>
+
+        <div class="tarjeta" onclick="supervista('../img/pastel8.jpg','Focaccia Cherry-Tomate','Tomate confit y aceitunas negras sobre masa aceitosa; ideal para compartir.')">
+            <img src="../img/pan8.jpg" alt="">
+            <h3>Focaccia Cherry-Tomate</h3>
+            <p>Sabores mediterráneos horneados encima.</p>
+        </div>
+
+        <div class="tarjeta" onclick="supervista('../img/pan9.jpg','Croissant de Mantequilla ','Hojaldre laminado 3×3, fermentación lenta y horneado dorado: flaky y mantecoso.')">
+            <img src="../img/pan9.jpg" alt="">
+            <h3>Croissant de Mantequilla </h3>
+            <p>27 capas de mantequilla francesa.</p>
+        </div>
+
+        <div class="tarjeta" onclick="supervista('../img/pan10.jpg','Croissant de Chocolate','Dos barras de chocolate semiamargo dentro del laminado; desmenuja y derrite.')">
+            <img src="../img/pan10.jpg" alt="">
+            <h3>Croissant de Chocolate</h3>
+            <p>Pain au chocolat auténtico.</p>
+        </div>
+
+        <div class="tarjeta" onclick="supervista('../img/pan11.jpg','Croissant de Almendras','Croissant day-after relleno de crema de almendra, glaseado y filetes tostados.')">
+            <img src="../img/pan11.jpg" alt="">
+            <h3>Croissant de Almendras </h3>
+            <p>Relleno de frangipane y almendra filete.</p>
+        </div>
+
+        <div class="tarjeta" onclick="supervista('../img/pan12.jpg','Croissant Salado','Jamón de país y queso gruyère dentro del laminado; contraste dulce-salado ideal.')">
+            <img src="../img/pan12.jpg" alt="">
+            <h3>Croissant Salado</h3>
+            <p>Masa dulce con relleno salado.</p>
+        </div>
+
+        <div class="tarjeta" onclick="supervista('../img/pan13.jpg','Pan de Yema','Yema de huevo y leche dan riqueza; perfecto para mermelada o sandwich dulce.')">
+            <img src="../img/pan13.jpg" alt="">
+            <h3>Pan de Yema</h3>
+            <p>Dorado suave y migaja amarilla.</p>
+        </div>
+
+        <div class="tarjeta" onclick="supervista('../img/pan14.jpg','Pan de Queso','Masa de almojábana o pan de bono: sin gluten, queso fresco y horno caliente.')">
+            <img src="../img/pan14.jpg" alt="">
+            <h3>Pan de Queso </h3>
+            <p>Queso dentro y por fuera.</p>
+        </div>
+
+        <div class="tarjeta" onclick="supervista('../img/pan15.jpg','Palitos de Queso','Laminado fino, queso rallado y semillas; snacks crujientes para aperitivo.')">
+            <img src="../img/pan15.jpg" alt="">
+            <h3>Palitos de Queso</h3>
+            <p>Hojaldre enrollado con parmesano.</p>
+        </div>
+
+        <div class="tarjeta" onclick="supervista('../img/pan16.jpg','Grissinis','30 cm de masa delgada con romero, tomate o ajo; ideal para dips.')">
+            <img src="../img/pan16.jpg" alt="">
+            <h3>Grissinis</h3>
+            <p>Palitos crujientes saborizados.</p>
+        </div>
+
+        <div class="tarjeta" onclick="supervista('../img/pan17.jpg','Pan de Aceitunas ','Baguette partida, untada con mantequilla de ajo y gratinada: acompañamiento obligado.')">
+            <img src="../img/pan17.jpg" alt="">
+            <h3>Pan de Ajo </h3>
+            <p>Mantequilla de ajo y perejil horneada.</p>
+        </div>
+
+        <div class="tarjeta" onclick="supervista('../img/pan18.jpg','Torta de Novia','Negras o verdes deshuesadas dentro del pan; salmuera natural que condimenta.')">
+            <img src="../img/pan18.jpg" alt="">
+            <h3>Pan de Aceitunas</h3>
+            <p>Masa blanca con aceitunas enteras .</p>
+        </div>
+    </div>
+</div>
+<div class="supervista-fondo" id="supervistaFondo">
+    <div class="supervista" id="supervistaContenido">
+        <img id="supervistaImg">
+        <h2 id="supervistaTitulo"></h2>
+        <p id="supervistaDesc"></p>
+        <button class="cerrar-supervista" onclick="cerrarSupervista()">Cerrar</button>
+    </div>
+</div>
+
+<script>
+function supervista(img, titulo, desc) {
+    document.getElementById("supervistaImg").src = img;
+    document.getElementById("supervistaTitulo").innerText = titulo;
+    document.getElementById("supervistaDesc").innerText = desc;
+    document.getElementById("supervistaFondo").style.display = "flex";
+}
+
+function cerrarSupervista() {
+    document.getElementById("supervistaFondo").style.display = "none";
+}
+</script>
+<footer>
+    <div class="container">
+
+        <div class="footer-content">
+            <h3>CONTACTA CON NOSOTROS</h3>
+            <p>Direccion: Av. Los Próceres N° 1280, Distrito de Los Olivos, Lima, Perú.</p>
+            <p>Telefono: +51 987654321</p>
+            <p>Correo: pasteleriaFyL@gmail.com</p>
+        </div>
+
+        <div class="footer-content redes">
+            <h3>NUESTRAS REDES</h3>
+            
+            <div class="icon-group">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+            </div>
+
+            <div class="icon-group">
+                <i class="fa-brands fa-x-twitter"></i>
+                <i class="fa-brands fa-tiktok"></i>
+            </div>
+        </div>
+
+        <div class="logo">
+            <img src="../img/logotipo.png" alt="logotipo">
+        </div>
+
+        <div class="comentario">
+            <p>© Todos los Derechos Reservados.</p>
+        </div>
+
+    </div>
+</footer>
+</body>
+</html>

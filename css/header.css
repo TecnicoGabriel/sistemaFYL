@@ -1,0 +1,207 @@
+/* ======================================================
+   =============   ESTILOS EXISTENTES (SIN CAMBIOS)  =====
+   ====================================================== */
+
+.navegacion a {
+  all: unset;
+  color: rgb(145,107,44);
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+}
+
+.cabecera-principal {
+  background: #FDF1DD;
+  padding: 0px 0;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.contenedor {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navegacion ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 35px;
+  margin: 0;
+  padding: 0;
+}
+
+.navegacion a {
+  color: rgb(145,107,44);
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 0;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navegacion a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 2px;
+  background: rgb(145,107,44);
+  transition: width 0.3s ease;
+}
+
+.navegacion a:hover::after,
+.navegacion a.activo::after {
+  width: 100%;
+}
+
+.navegacion a:hover {
+  color: rgb(120,88,35);
+}
+
+/* SUBMENÚ */
+.desplegable {
+  position: relative;
+}
+
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #FDF1DD;
+  box-shadow: 0 4px 10px rgba(0,0,0,.10);
+  border-radius: 6px;
+  padding: 10px 0;
+  min-width: 220px;
+  z-index: 1000;
+  margin: 0;
+  padding-left: 0;
+  display: none !important;
+}
+
+.submenu li {
+  list-style: none;
+}
+
+.submenu a {
+  display: block;
+  padding: 10px 20px;
+  font-size: 18px;
+  color: rgb(145,107,44);
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.submenu a:hover {
+  background: rgba(145,107,44,0.1);
+}
+
+.desplegable:hover .submenu {
+  display: block !important;
+}
+
+/* LOGO */
+.cabecera-principal img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+/* ======================================================
+   ==========   RESPONSIVE REAL PARA CELULAR   ==========
+   ====================================================== */
+
+@media (max-width: 900px) {
+  .contenedor {
+    padding: 0 10px;
+  }
+
+  .navegacion a {
+    font-size: 18px;
+  }
+
+  .cabecera-principal img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* ----------- CELULARES (MENÚ VERTICAL) ------------ */
+
+@media (max-width: 768px) {
+
+  /* CONTENEDOR HEADER */
+  .contenedor {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* MENÚ PRINCIPAL */
+  .navegacion ul {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .navegacion a {
+    font-size: 18px;
+  }
+
+  /* SUBMENÚ EN MÓVIL */
+  .submenu {
+    position: static !important;
+    background: transparent;
+    box-shadow: none;
+    width: 100%;
+    padding: 0;
+    display: none !important;
+  }
+
+  /* Al tocar padre se expande */
+  .desplegable:active .submenu,
+  .desplegable:focus-within .submenu {
+    display: block !important;
+  }
+
+  .submenu a {
+    padding: 8px 0;
+    font-size: 16px;
+  }
+
+  /* LOGO */
+  .cabecera-principal img {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+/* ----------- CELULARES PEQUEÑOS ---------------- */
+
+@media (max-width: 480px) {
+
+  .navegacion a {
+    font-size: 16px;
+  }
+
+  .submenu a {
+    font-size: 14px;
+  }
+
+  .cabecera-principal img {
+    width: 60px;
+    height: 60px;
+  }
+}

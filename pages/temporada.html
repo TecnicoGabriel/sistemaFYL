@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/productos.css">
+    <link rel="stylesheet" href="../css/footer.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<header class="cabecera-principal">
+  <div class="contenedor">
+    <img src="../img/logotipo.png" alt="" width="100px" height="100px">
+    <nav class="navegacion">
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+
+        <li class="desplegable">
+          <a href="#">Nuestros Productos</a>
+          <ul class="submenu">
+            <li><a href="pasteles.html">Pasteles y Tortas</a></li>
+            <li><a href="postres.html">Postres</a></li>
+            <li><a href="bocaditos.html">Bocaditos y Catering</a></li>
+            <li><a href="panaderia.html">Panadería Artesanal</a></li>
+            <li><a href="temporada.html">Postres de Temporada</a></li>
+          </ul>
+        </li>
+
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="contactanos.html">Contáctanos</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="productos-contenedor">
+    <h1>Postres</h1>
+
+    <div class="grid-productos">
+
+        <div class="tarjeta" onclick="supervista('../img/temp1.jpg','Panetón Artesanal  ','Fermentación 24 h, frutas confitadas o chispas de chocolate: esponjoso, aromático y sin conservantes.')">
+            <img src="../img/temp1.jpg" alt="">
+            <h3>Panetón Artesanal  </h3>
+            <p>Masa madre y frutas de diciembre.</p>
+        </div>
+
+        <div class="tarjeta" onclick="supervista('../img/temp2.jpg','Galletas de Jengibre ','Miel, jengibre y canela; glaseado real para decorar estrellas y corazones que crujen.')">
+            <img src="../img/temp2.jpg" alt="">
+            <h3>Galletas de Jengibre </h3>
+            <p>Especia y alegría en forma de muñeco.</p>
+        </div>
+
+        <div class="tarjeta" onclick="supervista('../img/temp3.jpg','Tronco de Navidad ','Bizcoch fino de cacao, crema de mantequilla y ganache; vetas de chocolate imitando madera.')">
+            <img src="../img/temp3.jpg" alt="">
+            <h3>Tronco de Navidad  </h3>
+            <p>Pionono de chocolate enrollado.</p>
+        </div>
+
+        <div class="tarjeta" onclick="supervista('../img/temp4.jpg','Stollen','Masa dulce con mantequilla, frutas maceradas y almendra filete; espolvoreado de azúcar glas nevado.')">
+            <img src="../img/temp4.jpg" alt="">
+            <h3>Stollen </h3>
+            <p>Pan alemeno con fruta y almendra.</p>
+        </div>
+
+        <div class="tarjeta" onclick="supervista('../img/temp5.jpg','Torta de Frutos Secos ','Pasas, nueces y cítricos confitados reposados 48 h; denso, húmedo y mejor con el tiempo.')">
+            <img src="../img/temp5.jpg" alt="">
+            <h3>Torta de Frutos Secos </h3>
+            <p>Corona dulce con sorpresa dentro.</p>
+        </div>
+
+        <div class="tarjeta" onclick="supervista('../img/temp6.jpg','Roscón de Reyes ','Masa brioche aromatizada con azahar, frutas confitadas y almendra; esconde figurita y haba.')">
+            <img src="../img/temp6.jpg" alt="">
+            <h3>Roscón de Reyes  </h3>
+            <p>Corona dulce con sorpresa dentro.</p>
+        </div>
+
+        <div class="tarjeta" onclick="supervista('../img/temp7.jpg','Caja de Galletas Navideñas Surtidas','Estrellas, árboles y muñecos de jengibre, vainilla y chocolate; listas para regalar o compartir.')">
+            <img src="../img/temp7.jpg" alt="">
+            <h3>Caja de Galletas Navideñas Surtidas </h3>
+            <p>Variedad festiva en una caja.</p>
+        </div>
+    </div>
+</div>
+<div class="supervista-fondo" id="supervistaFondo">
+    <div class="supervista" id="supervistaContenido">
+        <img id="supervistaImg">
+        <h2 id="supervistaTitulo"></h2>
+        <p id="supervistaDesc"></p>
+        <button class="cerrar-supervista" onclick="cerrarSupervista()">Cerrar</button>
+    </div>
+</div>
+
+<script>
+function supervista(img, titulo, desc) {
+    document.getElementById("supervistaImg").src = img;
+    document.getElementById("supervistaTitulo").innerText = titulo;
+    document.getElementById("supervistaDesc").innerText = desc;
+    document.getElementById("supervistaFondo").style.display = "flex";
+}
+
+function cerrarSupervista() {
+    document.getElementById("supervistaFondo").style.display = "none";
+}
+</script>
+<footer>
+    <div class="container">
+
+        <div class="footer-content">
+            <h3>CONTACTA CON NOSOTROS</h3>
+            <p>Direccion: Av. Los Próceres N° 1280, Distrito de Los Olivos, Lima, Perú.</p>
+            <p>Telefono: +51 987654321</p>
+            <p>Correo: pasteleriaFyL@gmail.com</p>
+        </div>
+
+        <div class="footer-content redes">
+            <h3>NUESTRAS REDES</h3>
+            
+            <div class="icon-group">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+            </div>
+
+            <div class="icon-group">
+                <i class="fa-brands fa-x-twitter"></i>
+                <i class="fa-brands fa-tiktok"></i>
+            </div>
+        </div>
+
+        <div class="logo">
+            <img src="../img/logotipo.png" alt="logotipo">
+        </div>
+
+        <div class="comentario">
+            <p>© Todos los Derechos Reservados.</p>
+        </div>
+
+    </div>
+</footer>
+</body>
+</html>

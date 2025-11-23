@@ -1,0 +1,229 @@
+/* ===========================
+   SECCIÓN CUERPO
+   =========================== */
+.cuerpo {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.cuerpo h2 {
+    font-size: 3rem;
+    font-weight: 300;
+    color: #666;
+    margin-bottom: 15px;
+    font-family: 'Soft-Elegance';
+}
+
+.cuerpo p {
+    font-size: 1.2rem;
+    color: #999;
+    font-weight: 300;
+}
+
+/* ===========================
+   LOCALIDADES / CARDS PEQUEÑAS
+   =========================== */
+.locales-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 40px;
+    flex-wrap: wrap;
+}
+
+.local-card {
+    position: relative;
+    width: 320px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 18px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
+.local-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.local-card:hover img {
+    transform: scale(1.1);
+}
+
+.local-card p {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 15px 10px;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: center;
+    background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0));
+}
+
+/* ===========================
+   CARD GRANDE (NOTICIA)
+   =========================== */
+.card-container {
+    display: flex;
+    gap: 25px;
+    padding: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.big-card {
+    width: 550px;
+    display: flex;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* PARTE TEXTO */
+.card-text {
+    width: 60%;
+    padding: 25px;
+}
+
+.card-text h2 {
+    font-size: 1.7rem;
+    margin: 5px 0 10px 0;
+    color: #333;
+}
+
+.card-text p {
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.categoria {
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.mundo {
+    color: #0d6efd;
+}
+
+.diseno {
+    color: #27a745;
+}
+
+.fecha {
+    color: #777;
+    font-size: 0.95rem;
+}
+
+.leer {
+    color: #0d6efd;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* PARTE MINIATURA */
+.card-thumb {
+    width: 40%;
+    background: #555b60;
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ======================================================
+   ================ RESPONSIVE ===========================
+   ====================================================== */
+
+/* -------- LAPTOS PEQUEÑOS Y TABLETS GRANDES -------- */
+@media (max-width: 992px) {
+    .cuerpo h2 {
+        font-size: 2.6rem;
+    }
+
+    .big-card {
+        width: 90%;
+    }
+
+    .card-text h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* ---------------- TABLETS ---------------- */
+@media (max-width: 768px) {
+
+    .cuerpo h2 {
+        font-size: 2.3rem;
+    }
+
+    .local-card {
+        width: 300px;
+        height: 220px;
+    }
+
+    .big-card {
+        flex-direction: column;
+        width: 95%;
+        height: auto;
+    }
+
+    .card-text {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .card-thumb {
+        width: 100%;
+        height: 220px;
+    }
+}
+
+/* ---------------- CELULARES ---------------- */
+@media (max-width: 480px) {
+
+    .cuerpo {
+        padding: 40px 15px;
+    }
+
+    .cuerpo h2 {
+        font-size: 2rem;
+    }
+
+    .cuerpo p {
+        font-size: 1rem;
+    }
+
+    .local-card {
+        width: 90%;
+        height: 220px;
+    }
+
+    .local-card p {
+        font-size: 1rem;
+    }
+
+    .big-card {
+        width: 100%;
+    }
+
+    .card-text h2 {
+        font-size: 1.4rem;
+    }
+
+    .card-thumb {
+        height: 200px;
+    }
+}

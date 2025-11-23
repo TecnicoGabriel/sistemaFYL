@@ -1,0 +1,141 @@
+footer {
+    background: #7c5652;
+    color: #fff;
+    padding: 30px 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* ======== BLOQUES DEL FOOTER ======== */
+.footer-content {
+    flex: 1 1 280px;   /* Se adapta automáticamente */
+    min-width: 250px;
+}
+
+.footer-content h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    border-bottom: 2px solid #ff7b00;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.footer-content p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.footer-content.redes {
+    text-align: left;
+}
+
+/* Íconos redes */
+.footer-content.redes i {
+    font-size: 40px;
+    margin: 10px 15px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.footer-content.redes i:hover {
+    color: #ff7b00;
+}
+
+/* LOGO */
+.logo {
+    flex: 1 1 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    margin-top: 20px;
+    border-radius: 80px;
+    width: 120px;
+    height: 120px;
+}
+
+/* COMENTARIO FINAL */
+.comentario {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.comentario p {
+    font-size: 15px;
+    color: #ccc;
+}
+
+
+/* ============================================================
+   =====================   RESPONSIVE   ========================
+   ============================================================ */
+
+/* TABLETS Y PANTALLAS MEDIAS */
+@media (max-width: 992px) {
+    .container {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .footer-content {
+        text-align: center;
+    }
+
+    .footer-content.redes {
+        text-align: center;
+    }
+}
+
+/* CELULARES */
+@media (max-width: 768px) {
+    .footer-content {
+        flex: 1 1 100%;
+    }
+
+    .footer-content.redes i {
+        font-size: 32px;
+        margin: 6px 10px;
+    }
+
+    .logo img {
+        width: 100px;
+        height: 100px;
+    }
+
+    footer {
+        padding: 25px 10px;
+    }
+}
+
+/* CELULARES PEQUEÑOS */
+@media (max-width: 480px) {
+    .footer-content p {
+        font-size: 13px;
+    }
+
+    .footer-content h3 {
+        font-size: 16px;
+    }
+
+    .footer-content.redes i {
+        font-size: 28px;
+        margin: 5px 8px;
+    }
+
+    .logo img {
+        width: 90px;
+        height: 90px;
+    }
+}

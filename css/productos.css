@@ -1,0 +1,189 @@
+/* ====================================================================== */
+/* ----------------------------- ESTILO GENERAL ------------------------- */
+/* ====================================================================== */
+
+body {
+    background: linear-gradient(to bottom, #fff7ec, #ffe7c4);
+    font-family: "Georgia", serif;
+    color: #5a3d1a;
+    margin: 0;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.productos-contenedor {
+    max-width: 1200px;
+    margin: 60px auto !important;
+    padding: 0 20px;
+    text-align: center;
+}
+
+/* TÍTULO */
+.productos-contenedor h1 {
+    font-size: 42px;
+    margin-bottom: 40px;
+    font-weight: bold;
+    color: #a8733a;
+}
+
+/* ====================================================================== */
+/* -------------------------- GRID DE PRODUCTOS -------------------------- */
+/* ====================================================================== */
+
+.grid-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 35px;
+}
+
+/* TARJETA DE PRODUCTO */
+.tarjeta {
+    background: #fff;
+    border-radius: 14px;
+    padding: 25px 20px;
+    border: 1px solid #f0d7b3;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    cursor: pointer;
+    transition: 0.25s ease;
+    position: relative;
+}
+
+.tarjeta:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* IMAGEN */
+.tarjeta img {
+    width: 90%;
+    max-width: 260px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 18px;
+}
+
+/* NOMBRE */
+.tarjeta h3 {
+    font-size: 22px;
+    margin-bottom: 8px;
+    color: #8b5e2d;
+    font-weight: bold;
+}
+
+/* DESCRIPCIÓN */
+.tarjeta p {
+    font-size: 15px;
+    color: #5a3d1a;
+    line-height: 1.5;
+}
+
+/* ====================================================================== */
+/* ------------------------------- MODAL --------------------------------- */
+/* ====================================================================== */
+
+.supervista-fondo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.75);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 9999;
+}
+
+.supervista {
+    background: white;
+    padding: 25px;
+    border-radius: 14px;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 4px 25px rgba(0,0,0,0.4);
+    animation: aparecer 0.3s ease;
+}
+
+.supervista img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 10px;
+}
+
+.supervista h2 {
+    margin-top: 20px;
+    color: #875424;
+    font-size: 26px;
+}
+
+.supervista p {
+    color: #444;
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+/* ANIMACIÓN */
+@keyframes aparecer {
+    from { transform: scale(0.85); opacity: 0; }
+    to   { transform: scale(1); opacity: 1; }
+}
+
+/* BOTÓN DE CERRAR */
+.cerrar-supervista {
+    margin-top: 20px;
+    background: #a8733a;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.2s ease;
+}
+
+.cerrar-supervista:hover {
+    background: #8d602f;
+}
+
+/* ====================================================================== */
+/* --------------------------- RESPONSIVIDAD ------------------------------ */
+/* ====================================================================== */
+
+/* Tablets y pantallas medianas */
+@media (max-width: 900px) {
+    .productos-contenedor h1 {
+        font-size: 34px;
+    }
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+
+    .productos-contenedor {
+        padding: 0 15px;
+        margin-top: 40px !important;
+    }
+
+    .tarjeta {
+        padding: 20px;
+    }
+
+    .tarjeta img {
+        height: 160px;
+    }
+
+    .supervista {
+        max-width: 95%;
+        padding: 20px;
+    }
+
+    .supervista img {
+        max-width: 280px;
+    }
+
+    .cerrar-supervista {
+        padding: 10px 20px;
+    }
+}
