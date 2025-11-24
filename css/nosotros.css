@@ -176,22 +176,7 @@ button {
     margin-top: 10px;
     transition: 0.2s ease;
 }
-/* RESPONSIVO */
-@media (max-width: 900px) {
-    .Banner_container__n7sX {
-        flex-direction: column;
-    }
 
-    .Banner_image__67Ej,
-    .Banner_main__n54OF {
-        width: 100%;
-    }
-
-    .Banner_main__n54OF {
-        padding: 60px 30px;
-        text-align: center;
-    }
-}
 /*==========================================================================================================*/
 
 /* Estilos generales para la sección de testimonios */
@@ -276,13 +261,143 @@ button {
     margin-top: 15px;
 }
 
-/* Media query para hacer el diseño responsivo en pantallas pequeñas */
-@media (max-width: 768px) {
-    .testimonials-container {
-        flex-direction: column; 
-        gap: 40px;
+/* ================================
+   RESPONSIVE GENERAL NOSOTROS
+   ================================ */
+
+/* Tablets */
+@media (max-width: 992px) {
+
+    /* Sección con texto + imagen (label) */
+    .label {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .texto h3,
+    .texto p {
+        text-align: center;
+    }
+
+    .quienes img {
+        max-width: 380px;
+    }
+
+    /* Carrusel centrado */
+    #carruselFYL {
+        max-width: 700px;
+    }
+
+    /* Banner */
+    .Banner_title__FAvYR {
+        font-size: 38px;
+    }
+
+    .Banner_description__teY1S {
+        font-size: 20px;
     }
 }
-/*==============================================================================*/
 
 
+/* Celulares */
+@media (max-width: 768px) {
+
+    /* Bloque texto + imagen NOSOTROS */
+    .label {
+        flex-direction: column;
+        gap: 25px;
+        padding: 0 15px;
+    }
+
+    .texto h3 {
+        font-size: 24px;
+    }
+
+    .texto p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .quienes img {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    /* Carrusel */
+    #carruselFYL {
+        max-width: 500px;
+        margin-top: 15px;
+    }
+
+    /* Banner */
+    .Banner_main__n54OF {
+        padding: 40px 20px;
+    }
+
+    .Banner_title__FAvYR {
+        font-size: 32px;
+    }
+
+    .Banner_description__teY1S {
+        font-size: 18px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 10px 28px;
+    }
+
+    /* Testimonios */
+    .testimonials-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .testimonial-card {
+        max-width: 100%;
+    }
+}
+
+
+/* Celulares pequeños */
+@media (max-width: 480px) {
+
+    .texto h3 {
+        font-size: 22px;
+    }
+
+    .texto p {
+        font-size: 15px;
+    }
+
+    .quienes img {
+        max-width: 280px;
+    }
+
+    #carruselFYL {
+        max-width: 100%;
+    }
+
+    .Banner_title__FAvYR {
+        font-size: 28px;
+    }
+
+    .Banner_description__teY1S {
+        font-size: 16px;
+    }
+
+    button {
+        font-size: 15px;
+        padding: 9px 25px;
+    }
+
+    .profile-picture {
+        width: 80px;
+        height: 80px;
+    }
+
+    .quote-box {
+        padding-top: 60px;
+    }
+}
