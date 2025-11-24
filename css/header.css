@@ -118,89 +118,95 @@
   object-fit: contain;
 }
 
+/* ===== MÓVIL MEJORADO ===== */
 @media (max-width: 768px) {
 
-  /* ===== CABECERA ===== */
-  .contenedor {
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
-  }
-
-  /* ===== MENÚ EN UNA SOLA LÍNEA (SIN BAJAR) ===== */
-  .navegacion {
-    width: 100%;
-    overflow-x: auto;
-    white-space: nowrap;
-  }
-
-  .navegacion ul {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    gap: 25px;
-    justify-content: center;
-    width: max-content;
-    margin: 8px auto 0;
-    padding: 0;
-  }
-
-  .navegacion a {
-    font-size: 17px;
-    padding: 6px 10px;
-    white-space: nowrap;
-  }
-
-  /* ===== SUBMENÚ FIJO Y QUE SE VEA SIN BAJAR EL RESTO ===== */
-  .desplegable {
-    position: relative;
-  }
-
-  .submenu {
-    position: fixed !important;   /* 🔥 Se pega debajo del menú */
-    top: 110px;                   /* 🔥 Justo bajo tu header */
-    left: 50%;
-    transform: translateX(-50%);
-    background: #FDF1DD;
-    padding: 10px 0;
-    border-radius: 6px;
-    min-width: 240px;
-    box-shadow: 0 4px 10px rgba(0,0,0,.10);
-    display: none !important;
-    z-index: 9999;
-  }
-
-  .desplegable:hover .submenu,
-  .desplegable:focus-within .submenu {
-    display: block !important;
-  }
-
-  /* TAMAÑO LOGO */
-  .cabecera-principal img {
-    width: 65px;
-    height: 65px;
-  }
+.contenedor {
+flex-wrap: wrap;
+justify-content: center;
+text-align: center;
 }
 
+/* Menú principal centrado y adaptativo */
+.navegacion {
+width: 100%;
+overflow: hidden; /* evita scroll horizontal */
+}
 
-/* ----- CELULAR MUY PEQUEÑO ----- */
+.navegacion ul {
+display: flex;
+flex-direction: column; /* ahora vertical */
+flex-wrap: nowrap;
+gap: 0;
+justify-content: center;
+width: 100%;
+margin: 10px 0 0;
+padding: 0;
+background: #FDF1DD;
+border-radius: 6px;
+}
+
+.navegacion li {
+width: 100%;
+text-align: center;
+border-bottom: 1px solid rgba(145,107,44,0.1);
+}
+
+.navegacion a {
+font-size: 17px;
+padding: 10px 0;
+display: block;
+white-space: normal; /* texto se ajusta */
+}
+
+/* Submenú adaptado */
+.submenu {
+position: relative !important;
+top: 0;
+left: 0;
+transform: none;
+min-width: 100%;
+display: none !important;
+box-shadow: none;
+border-radius: 0;
+padding: 0;
+}
+
+.desplegable:hover .submenu,
+.desplegable:focus-within .submenu {
+display: block !important;
+}
+
+.submenu li {
+border-bottom: 1px solid rgba(145,107,44,0.1);
+}
+
+.submenu a {
+padding: 10px 0;
+font-size: 16px;
+}
+
+/* Logo más pequeño */
+.cabecera-principal img {
+width: 65px;
+height: 65px;
+}
+}
+
+/* CELULARES PEQUEÑOS */
 @media (max-width: 480px) {
+.navegacion a {
+font-size: 15px;
+padding: 8px 0;
+}
 
-  .navegacion ul {
-    gap: 15px;
-  }
+.submenu a {
+font-size: 14px;
+padding: 8px 0;
+}
 
-  .navegacion a {
-    font-size: 15px;
-    padding: 5px 8px;
-  }
-
-  .submenu {
-    top: 95px;   /* 🔥 Se ajusta a menú pequeño */
-  }
-
-  .cabecera-principal img {
-    width: 55px;
-    height: 55px;
-  }
+.cabecera-principal img {
+width: 55px;
+height: 55px;
+}
 }
