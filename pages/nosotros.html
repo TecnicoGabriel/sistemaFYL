@@ -98,73 +98,155 @@
 
 
 <div class="Home_container__M8Lb">
-    <article class="Banner_container__n7sX">
-        <figure class="Banner_image__67Ej">
-            <img src="../img/mision.png" 
-                 alt="Tus favoritos de canela">
-        </figure>
+        <article class="Banner_container__n7sX">
+            <figure class="Banner_image__67Ej">
+                <img src="../img/mision.png">
+            </figure>
 
-        <div class="Banner_main__n54OF" style="background-color: #DAE6D6;">
-            <div style="display: flex;">
-                <h2 class="Banner_title__FAvYR" style="color: rgb(255, 255, 255);">
-                    ⭐ MISION 🥧
-                </h2>
-
-                <p class="Banner_description__teY1S" style="color: rgb(255, 255, 255);">
-                    En FyL Delicious nos dedicamos a endulzar los momentos especiales de nuestros clientes, ofreciendo 
-                    postres elaborados con ingredientes de calidad, un servicio amable y una experiencia que deja huella en cada bocado.
-                </p>
+            <div class="Banner_main__n54OF">
+                <div>
+                    <h2 class="Banner_title__FAvYR">
+                        Misión
+                    </h2>
+                    <p class="Banner_description__teY1S">
+                        En FyL Delicious nos dedicamos a endulzar los momentos especiales de nuestros clientes, ofreciendo 
+                        postres elaborados con ingredientes de calidad, un servicio amable y una experiencia que deja huella en cada bocado.
+                    </p>
+                </div>
             </div>
-        </div>
-    </article>
-</div>
+        </article>
+    </div>
 
-<div class="Home_container__M8Lb">
-    <article class="Banner_container__n7sX">
-        <figure class="Banner_image__67Ej">
-            <img src="../img/vision.png">
-        </figure>
+    <!-- VISIÓN -->
+    <div class="Home_container__M8Lb">
+        <article class="Banner_container__n7sX">
+            <figure class="Banner_image__67Ej">
+                <img src="../img/vision.png">
+            </figure>
 
-        <div class="Banner_main__n54OF" style="background-color:#DAE6D6;">
-            <div style="display: flex;">
-                <h2 class="Banner_title__FAvYR" style="color: rgb(255, 255, 255);">
-                    ⭐ VISION 🧁
-                </h2>
-
-                <p class="Banner_description__teY1S" style="color: rgb(255, 255, 255);">
-                    Queremos convertirnos en la pastelería favorita del distrito, reconocida por nuestro sabor auténtico y nuestra dedicación. 
-                    Aspiramos a crecer y ampliar nuestros servicios, llevando nuestras delicias a más familias.
-                </p>
-
+            <div class="Banner_main__n54OF">
+                <div>
+                    <h2 class="Banner_title__FAvYR">
+                        Visión
+                    </h2>
+                    <p class="Banner_description__teY1S">
+                        Queremos convertirnos en la pastelería favorita del distrito, reconocida por nuestro sabor auténtico y nuestra dedicación. 
+                        Aspiramos a crecer y ampliar nuestros servicios, llevando nuestras delicias a más familias.
+                    </p>
+            
+                </div>
             </div>
-        </div>
-    </article>
-</div>
+        </article>
+    </div>
 
-<div class="Home_container__M8Lb">
-    <article class="Banner_container__n7sX">
-        <figure class="Banner_image__67Ej">
-            <img src="../img/valores.png">
-        </figure>
+    <!-- VALORES -->
+    <div class="Home_container__M8Lb">
+        <article class="Banner_container__n7sX">
+            <figure class="Banner_image__67Ej">
+                <img src="../img/valores.png">
+            </figure>
 
-        <div class="Banner_main__n54OF" style="background-color:#DAE6D6;">
-            <div style="display: flex;">
-                <h2 class="Banner_title__FAvYR" style="color: rgb(255, 255, 255);">
-                    ⭐VALORES 🎉
-                </h2>
-
-                <p class="Banner_description__teY1S" style="color: rgb(255, 255, 255);">
-                      Eficacia<br>
-                      Compromiso<br>
-                      Seguridad<br>
-                      Calidad<br>
-                      Creatividad<br>
-                      Responsabilidad<br>
-                </p>
+            <div class="Banner_main__n54OF">
+                <div>
+                    <h2 class="Banner_title__FAvYR">
+                        Valores
+                    </h2>
+                    <div class="values-list">
+                        <div class="value-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Eficacia</span>
+                        </div>
+                        <div class="value-item">
+                            <i class="fas fa-handshake"></i>
+                            <span>Compromiso</span>
+                        </div>
+                        <div class="value-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Seguridad</span>
+                        </div>
+                        <div class="value-item">
+                            <i class="fas fa-award"></i>
+                            <span>Calidad</span>
+                        </div>
+                        <div class="value-item">
+                            <i class="fas fa-lightbulb"></i>
+                            <span>Creatividad</span>
+                        </div>
+                        <div class="value-item">
+                            <i class="fas fa-balance-scale"></i>
+                            <span>Responsabilidad</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </article>
-</div>
+        </article>
+    </div>
+
+    <script>
+        // Animación de entrada escalonada
+        document.addEventListener('DOMContentLoaded', function() {
+            const containers = document.querySelectorAll('.Home_container__M8Lb');
+            
+            containers.forEach((container, index) => {
+                container.style.animationDelay = `${index * 0.2}s`;
+            });
+
+            // Interacción con botones
+            const buttons = document.querySelectorAll('.cta-button');
+            buttons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Crear efecto de ripple
+                    const ripple = document.createElement('span');
+                    ripple.style.position = 'absolute';
+                    ripple.style.borderRadius = '50%';
+                    ripple.style.background = 'rgba(255, 255, 255, 0.6)';
+                    ripple.style.transform = 'scale(0)';
+                    ripple.style.animation = 'ripple 0.6s linear';
+                    ripple.style.left = '50%';
+                    ripple.style.top = '50%';
+                    ripple.style.width = '20px';
+                    ripple.style.height = '20px';
+                    ripple.style.marginLeft = '-10px';
+                    ripple.style.marginTop = '-10px';
+                    
+                    this.style.position = 'relative';
+                    this.appendChild(ripple);
+                    
+                    setTimeout(() => {
+                        ripple.remove();
+                    }, 600);
+                });
+            });
+        });
+
+        // CSS para ripple animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes ripple {
+                to {
+                    transform: scale(4);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <section class="testimonials-section">
     <h2>Lo que dicen nuestros clientes</h2>
