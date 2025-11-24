@@ -118,7 +118,6 @@
   object-fit: contain;
 }
 
-/* ===== MÓVIL MEJORADO ===== */
 @media (max-width: 768px) {
 
 .contenedor {
@@ -127,49 +126,48 @@ justify-content: center;
 text-align: center;
 }
 
-/* Menú principal centrado y adaptativo */
+/* Menú principal en fila, con wrap automático */
 .navegacion {
 width: 100%;
-overflow: hidden; /* evita scroll horizontal */
 }
 
 .navegacion ul {
 display: flex;
-flex-direction: column; /* ahora vertical */
-flex-wrap: nowrap;
-gap: 0;
+flex-direction: row;
+flex-wrap: wrap; /* permite varias filas si no cabe */
+gap: 10px;
 justify-content: center;
-width: 100%;
-margin: 10px 0 0;
+margin: 10px auto 0;
 padding: 0;
-background: #FDF1DD;
-border-radius: 6px;
+width: 100%;
 }
 
 .navegacion li {
-width: 100%;
+position: relative;
+flex: 1 1 auto; /* se ajusta al ancho disponible */
 text-align: center;
-border-bottom: 1px solid rgba(145,107,44,0.1);
 }
 
 .navegacion a {
 font-size: 17px;
-padding: 10px 0;
+padding: 6px 8px;
 display: block;
-white-space: normal; /* texto se ajusta */
+white-space: normal; /* se ajusta el texto */
 }
 
-/* Submenú adaptado */
+/* Submenú debajo del item */
 .submenu {
-position: relative !important;
-top: 0;
-left: 0;
-transform: none;
-min-width: 100%;
+position: absolute !important;
+top: 100%;
+left: 50%;
+transform: translateX(-50%);
+min-width: 150px;
+background: #FDF1DD;
+padding: 5px 0;
+border-radius: 6px;
+box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 display: none !important;
-box-shadow: none;
-border-radius: 0;
-padding: 0;
+z-index: 9999;
 }
 
 .desplegable:hover .submenu,
@@ -182,27 +180,26 @@ border-bottom: 1px solid rgba(145,107,44,0.1);
 }
 
 .submenu a {
-padding: 10px 0;
-font-size: 16px;
+padding: 8px 12px;
+font-size: 15px;
 }
 
-/* Logo más pequeño */
+/* Logo */
 .cabecera-principal img {
 width: 65px;
 height: 65px;
 }
 }
 
-/* CELULARES PEQUEÑOS */
 @media (max-width: 480px) {
 .navegacion a {
-font-size: 15px;
-padding: 8px 0;
+font-size: 14px;
+padding: 4px 6px;
 }
 
 .submenu a {
-font-size: 14px;
-padding: 8px 0;
+font-size: 13px;
+padding: 6px 10px;
 }
 
 .cabecera-principal img {
