@@ -78,64 +78,79 @@ footer {
 }
 
 
-/* ============================================================
-   =====================   RESPONSIVE   ========================
-   ============================================================ */
+/* ===================== RESPONSIVE FOOTER ===================== */
 
 /* TABLETS Y PANTALLAS MEDIAS */
 @media (max-width: 992px) {
-    .container {
-        justify-content: center;
-        text-align: center;
-    }
+  .container {
+      justify-content: center;
+      text-align: center;
+      gap: 15px;
+  }
 
-    .footer-content {
-        text-align: center;
-    }
+  .footer-content {
+      text-align: center;
+  }
 
-    .footer-content.redes {
-        text-align: center;
-    }
+  .footer-content.redes {
+      text-align: center;
+  }
 }
 
 /* CELULARES */
 @media (max-width: 768px) {
-    .footer-content {
-        flex: 1 1 100%;
-    }
 
-    .footer-content.redes i {
-        font-size: 32px;
-        margin: 6px 10px;
-    }
+  footer {
+      padding: 18px 10px; /* reduce altura */
+  }
 
-    .logo img {
-        width: 100px;
-        height: 100px;
-    }
+  .footer-content {
+      flex: 1 1 100%;
+      margin-bottom: 8px;
+  }
 
-    footer {
-        padding: 25px 10px;
-    }
+  .footer-content.redes i {
+      font-size: 30px;
+      margin: 5px 8px;
+  }
+
+  .logo img {
+      width: 90px;
+      height: 90px;
+      margin-top: 10px; /* menos espacio */
+  }
+
+  .comentario {
+      margin-top: 5px;
+  }
+
+  .comentario p {
+      font-size: 14px;
+  }
 }
 
 /* CELULARES PEQUEÑOS */
 @media (max-width: 480px) {
-    .footer-content p {
-        font-size: 13px;
-    }
 
-    .footer-content h3 {
-        font-size: 16px;
-    }
+  .footer-content p {
+      font-size: 13px;
+  }
 
-    .footer-content.redes i {
-        font-size: 28px;
-        margin: 5px 8px;
-    }
+  .footer-content h3 {
+      font-size: 15px;
+  }
 
-    .logo img {
-        width: 90px;
-        height: 90px;
-    }
+  .footer-content.redes i {
+      font-size: 26px;
+      margin: 4px 6px;
+  }
+
+  .logo img {
+      width: 80px;
+      height: 80px;
+  }
+
+  footer {
+      padding: 15px 8px;
+  }
 }

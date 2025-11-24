@@ -118,90 +118,73 @@
   object-fit: contain;
 }
 
-/* ======================================================
-   ==========   RESPONSIVE REAL PARA CELULAR   ==========
-   ====================================================== */
-
-@media (max-width: 900px) {
-  .contenedor {
-    padding: 0 10px;
-  }
-
-  .navegacion a {
-    font-size: 18px;
-  }
-
-  .cabecera-principal img {
-    width: 80px;
-    height: 80px;
-  }
-}
-
-/* ----------- CELULARES (MENÚ VERTICAL) ------------ */
-
 @media (max-width: 768px) {
 
-  /* CONTENEDOR HEADER */
+  /* CONTENEDOR */
   .contenedor {
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
   }
 
-  /* MENÚ PRINCIPAL */
-  .navegacion ul {
-    flex-direction: column;
-    gap: 15px;
+  /* MENÚ SIEMPRE EN UNA SOLA LÍNEA */
+  .navegacion {
     width: 100%;
-    margin-top: 10px;
+    overflow-x: auto; /* 🔥 Aparece scroll si no entra */
+    white-space: nowrap; /* 🔥 Evita que los items bajen */
+  }
+
+  .navegacion ul {
+    flex-direction: row;   /* 🔥 Horizontal */
+    flex-wrap: nowrap;     /* 🔥 No deja que bajen */
+    gap: 20px;
+    justify-content: center;
+    width: max-content;    /* 🔥 Hace que la línea no se rompa */
+    margin: 10px auto 0;
   }
 
   .navegacion a {
-    font-size: 18px;
+    font-size: 17px;
+    padding: 6px 10px;
+    white-space: nowrap;
   }
 
-  /* SUBMENÚ EN MÓVIL */
+  /* SUBMENÚ */
   .submenu {
-    position: static !important;
-    background: transparent;
-    box-shadow: none;
-    width: 100%;
-    padding: 0;
+    position: absolute !important;
+    background: #FDF1DD;
+    box-shadow: 0 4px 10px rgba(0,0,0,.10);
+    padding: 10px 0;
     display: none !important;
   }
 
-  /* Al tocar padre se expande */
-  .desplegable:active .submenu,
+  .desplegable:hover .submenu,
   .desplegable:focus-within .submenu {
     display: block !important;
   }
 
-  .submenu a {
-    padding: 8px 0;
-    font-size: 16px;
-  }
-
   /* LOGO */
   .cabecera-principal img {
-    width: 70px;
-    height: 70px;
+    width: 65px;
+    height: 65px;
   }
 }
 
-/* ----------- CELULARES PEQUEÑOS ---------------- */
+
+/* ----------- CELULAR MUY PEQUEÑO ---------------- */
 
 @media (max-width: 480px) {
 
-  .navegacion a {
-    font-size: 16px;
+  .navegacion ul {
+    gap: 10px;
   }
 
-  .submenu a {
-    font-size: 14px;
+  .navegacion a {
+    font-size: 15px;
   }
 
   .cabecera-principal img {
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
   }
 }
