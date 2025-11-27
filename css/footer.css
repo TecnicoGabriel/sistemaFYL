@@ -1,7 +1,7 @@
 footer {
     background: #7c5652;
     color: #fff;
-    padding: 30px 0;
+    padding: 20px 0;
     font-family: Arial, sans-serif;
 }
 
@@ -43,8 +43,8 @@ footer {
 
 .logo img {
     border-radius: 80px;
-    width: 180px;   /* antes 150px */
-    height: 180px;  /* antes 150px */
+    width: 180px; 
+    height: 180px;  
     padding: 15px;
 }
 
@@ -131,15 +131,98 @@ footer {
     color: #ddd;
 }
 
-/* RESPONSIVE */
+/* RESPONSIVE (COMPACTO Y ALINEACIÓN TOP CORREGIDA) */
 @media (max-width: 768px) {
-    .footer-content,
-    .footer-social {
-        width: 100%;
-        text-align: center;
+    footer {
+        padding: 10px 0;
+    }
+    
+    .container {
+        width: 95%; 
+        gap: 5px;
+        justify-content: center;
+        align-items: flex-start;
     }
 
+    /* CENTRADO DE CONTACTO Y REDES DENTRO DE SU ESPACIO (45%) */
+    .footer-content {
+        width: 45%; 
+        min-width: auto;
+        text-align: center; /* ¡CLAVE! Centra el contenido */
+        padding-right: 5px; 
+        padding-top: 0;
+        margin-top: 0;
+    }
+    
+    .footer-social {
+        width: 45%; 
+        text-align: center; /* ¡CLAVE! Centra el contenido */
+        padding-left: 5px; 
+        padding-top: 0;
+        margin-top: 0;
+    }
+    
+    /* REDUCCIÓN DE ALTURA DE LA COLUMNA DE CONTACTO PARA ALINEAR EL LOGO */
+    .footer-content p {
+        font-size: 9px; /* REDUCIDO DE 10px a 9px */
+        margin: 0; /* ELIMINADO MARGEN ENTRE LÍNEAS */
+    }
+    
+    /* AJUSTES DE TÍTULOS */
+    .footer-content h3 {
+        font-size: 14px;
+        margin-top: 0;
+        margin-bottom: 2px;
+        padding-bottom: 2px;
+    }
+    
+    .footer-social h3 {
+        font-size: 14px; 
+        margin-top: 0;
+        margin-bottom: 2px;
+        padding-bottom: 2px;
+    }
+
+    /* LOGO MUY PEQUEÑO Y CENTRADO */
     .logo {
         justify-content: center;
+        margin: 5px 0; 
+    }
+
+    .logo img {
+        width: 50px; 
+        height: 50px; 
+        padding: 0; 
+    }
+
+    /* AJUSTES DE REDES SOCIALES (Asegura el centrado del grid) */
+    .social-icons {
+        gap: 5px; 
+        margin-top: 5px;
+        /* El grid está centrado gracias a text-align: center en .footer-social */
+        display: inline-grid; /* Cambiamos a inline-grid para que el grid se centre */
+    }
+    
+    .social-icon {
+        padding: 5px; 
+        border-radius: 5px; 
+    }
+
+    .social-icon i {
+        font-size: 14px; 
+        margin-bottom: 3px; 
+    }
+
+    .social-icon span {
+        font-size: 9px; 
+    }
+
+    /* COPYRIGHT */
+    .comentario {
+        padding-top: 10px;
+        font-size: 10px;
+    }
+    .comentario p {
+        font-size: 10px;
     }
 }
